@@ -1,7 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
+## makeCacheMatrix and cacheSolve return an inverted matrix given as input for the makeCacheMatrix function
+## these functions illustrate the mechanism of the caching with the <<- symbols
 
-## Write a short comment describing this function
+## makeCacheMatrix returns a list of functions transmited as parameters of the returned "matrix"
+## myReturn$set() allows to update the input matrix
+## myReturn$get() displays the input matrix
+## myReturn$setinv creates the inverted matrix
+## myReturn$getinv displays the inverted matrix
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
@@ -19,7 +23,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve calls the makeCacheMatrix function to calculate and displax its inverted matrix
+## Calling the cached data allows it to work quickly
 
 cacheSolve <- function(x, ...) {
     m <- x$getinv()
